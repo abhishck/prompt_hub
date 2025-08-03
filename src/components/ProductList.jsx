@@ -1,0 +1,31 @@
+import React from "react";
+import category2 from "../assets/category2.jpg";
+function ProductList({item}) {
+  return (
+    
+      <div className="h-fit w-[330px] group hover:-translate-y-2 overflow-hidden sm:w-[400px] transition-all duration-300 shadow-xl rounded-lg">
+        <img
+          src={item.img1}
+          alt=""
+          className="h-[200px] w-full rounded-t-xl cursor-grab group-hover:scale-105 transition-all duration-200"
+        />
+        <div className="p-6 flex flex-col gap-4">
+          <h1 className="text-3xl font-bold max-w-[350px] group-hover:text-purple-500">{item.name}</h1>
+          <p className="text-xl font-medium font-[Outfit] ">
+           {item.description}
+          </p>
+         <div className="flex justify-between items-center">
+            <p className="text-xl font-medium font-[Outfit] ">{item.rating}</p>
+            <p className="text-xl font-medium text-purple-500 font-[Outfit] ">{item.price}</p>
+         </div>
+         <div className="w-full flex flex-col gap-2">
+            <button className="px-5 py-3 w-full text-white font-medium font-[Outfit] bg-purple-500 rounded-lg capitalize">view detail</button>
+            <button className="px-5 py-3 w-full text-purple-500 font-medium font-[Outfit] border-2 border-purple-500  rounded-lg capitalize">Add to cart</button>
+         </div>
+        </div>
+      </div>
+  
+  );
+}
+
+export default ProductList;
