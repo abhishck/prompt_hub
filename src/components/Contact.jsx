@@ -57,7 +57,7 @@ function Contact() {
         </div>
       </div>
       <div className="w-full  px-8 sm:px-12 md:px-24 lg:px-32 flex flex-col gap-8 pt-12 lg:pt-6 bg-black">
-        <div className="py-24 flex flex-col gap-10 lg:flex-row lg:justify-between">
+        <div className="py-20 flex flex-col gap-10 lg:flex-row lg:justify-between">
           <div className="w-full lg:w-[25vw] flex flex-col gap-8 text-center">
             <h1 className="capitalize font-[pacifico] font-semibold text-2xl sm:text-3xl text-purple-600">
               promptHub
@@ -186,7 +186,7 @@ function Contact() {
           <h1 className="text-lg font-medium font-[Outfit] text-gray-400">
             © 2024 PromptHub. All rights reserved.
           </h1>
-          <div className="flex flex-col gap-3 text-center lg:flex-row lg:justify-between">
+          <div className="flex flex-col lg:w-[40vw] gap-3 text-center lg:flex-row lg:justify-between">
             <a href=""  className="text-lg font-medium font-[Outfit] text-white/60">Privacy Policy</a>
             <a href="" className="text-lg font-medium font-[Outfit] text-white/60">Terms of Service</a>
             <a href="" className="text-lg font-medium font-[Outfit] text-white/60">Refund Policy</a>

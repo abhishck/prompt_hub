@@ -17,7 +17,7 @@ function Testiomonial() {
         See how professionals are transforming their work with our premium prompts
         </p>
         </div>
-        <div className=' flex flex-col gap-8 lg:flex-row lg:flex-wrap items-center max-w-[80vw] mx-auto py-10'>
+        <div className=' flex flex-col gap-8 lg:flex-row lg:flex-wrap items-center max-w-[80vw] mx-auto py-10 justify-center'>
             {
                 number.map((_,index)=>{
                     return(
@@ -26,8 +26,8 @@ function Testiomonial() {
                 })
             }
         </div>
-        <div className='flex flex-col items-center md:flex-row justify-center w-full py-15'> 
-            <div className='w-[70vw] bg-gray-300 flex flex-col gap-10 items-center  lg:flex-row p-10 lg:justify-between lg:px-48 rounded-lg group shadow-xl hover:shadow-2xl hover:scale-102 transition-smooth duration-300'>
+        <div className='flex flex-col items-center lg:flex-row justify-center w-full py-15'> 
+            <div className='w-[70vw] bg-gray-300 flex flex-col gap-10 items-center  lg:flex-row p-10 lg:justify-center rounded-lg group shadow-xl hover:shadow-2xl hover:scale-102 transition-smooth duration-300'>
                <div className='text-center hover:scale-110 transition-smooth duration-200'>
                 <h1 className='text-5xl font-[Outfit] font-semibold text-purple-500'>50k+</h1>
                 <p className='font-[Outfit] font-medium text-gray-500 text-2xl'>Happy Customer</p>

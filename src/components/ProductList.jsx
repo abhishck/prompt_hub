@@ -3,7 +3,7 @@ import category2 from "../assets/category2.jpg";
 function ProductList({item}) {
   return (
     
-      <div className="h-fit w-[330px] group hover:-translate-y-2 overflow-hidden sm:w-[400px] transition-all duration-300 shadow-xl rounded-lg">
+      <div className="h-fit w-[330px] group hover:-translate-y-2 overflow-hidden sm:w-[400px] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group rounded-lg">
         <img
           src={item.img1}
           alt=""
@@ -15,7 +15,7 @@ function ProductList({item}) {
            {item.description}
           </p>
          <div className="flex justify-between items-center">
-            <p className="text-xl font-medium font-[Outfit] ">{item.rating}</p>
+            <p className="text-xl font-medium font-[Outfit] ">⭐⭐⭐⭐⭐ {item.rating}</p>
             <p className="text-xl font-medium text-purple-500 font-[Outfit] ">{item.price}</p>
          </div>
          <div className="w-full flex flex-col gap-2">
