@@ -1,5 +1,5 @@
     import React from 'react'
-import category1 from "../assets/category1.jpg"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faMessage } from '@fortawesome/free-solid-svg-icons'
 function CategoryCard({item}) {

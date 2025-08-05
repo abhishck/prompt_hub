@@ -1,8 +1,9 @@
 import React from "react";
-import category1 from "../assets/category1.jpg";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faMessage } from "@fortawesome/free-solid-svg-icons";
 import CategoryCard from "./CategoryCard";
+import { motion } from "motion/react";
 
 function Categories() {
   const promptCategories = [
@@ -40,7 +41,12 @@ function Categories() {
 
   return (
     <div className="w-full  px-8 sm:px-12 md:px-24 lg:px-32 flex flex-col gap-10 pt-24 lg:pt-32 ">
-      <div className="flex flex-col gap-4 text-center">
+      <motion.div
+       initial={{opacity:0,scale:0}}
+      whileInView={{opacity:1,scale:1}}
+      transition={{duration:1}}
+      viewport={{ once: true }}
+      className="flex flex-col gap-4 text-center">
         <h1 className="text-[40px] font-bold font-[Outfit] max-w-[80vw] mx-auto leading-10 sm:text-7xl sm:leading-18 ">
           Explore Prompt Categories
         </h1>
@@ -48,14 +54,19 @@ function Categories() {
           Find the perfect prompts for your specific needs across multiple AI
           platforms and use cases
         </p>
-      </div>
-      <div className="flex w-full flex-col gap-8 lg:flex-row lg:flex-wrap items-center   lg:justify-center">
+      </motion.div>
+      <motion.div 
+       initial={{opacity:0,scale:0}}
+      whileInView={{opacity:1,scale:1}}
+      transition={{duration:1}}
+      viewport={{ once: true }}
+      className="flex w-full flex-col gap-8 lg:flex-row lg:flex-wrap items-center   lg:justify-center">
         {promptCategories.map((item,index)=>{
           return (
             <CategoryCard item={item} key={index}/>
           )
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }

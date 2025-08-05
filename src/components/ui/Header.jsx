@@ -1,5 +1,5 @@
 import React from "react";
-import header from "../assets/header.jpg";
+import header from "../../assets/header.jpg";
 import Navbar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,8 @@ function Header() {
        initial={{opacity: 0, scale:0}}
        whileInView={{opacity:1 , scale:1 }}
        transition={{ duration: 1 }}
-        className="flex flex-col gap-4 pt-[150px] md:pt-[80px] my-auto ">
+       viewport={{ once: true }}
+        className="flex flex-col gap-4 pt-[150px] md:pt-[60px] my-auto ">
           {["Premium AI", "Prompts for", "Creative ","Success"].map(
             (item, index) => {
               return (

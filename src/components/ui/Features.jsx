@@ -1,8 +1,8 @@
 import React, { useEffect,useState } from 'react'
-import { prompts } from '../assets/prompt_catalog'
+import { prompts } from '../../assets/prompt_catalog'
 import ProductList from './ProductList'
 import { useDispatch, useSelector } from 'react-redux'
-import { setCategory } from '../Redux/Slices/CategorSlice'
+import { setCategory } from '../../Redux/Slices/CategorSlice'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 

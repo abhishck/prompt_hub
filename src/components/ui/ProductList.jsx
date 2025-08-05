@@ -1,5 +1,5 @@
 import React from "react";
-import category2 from "../assets/category2.jpg";
+
 function ProductList({item}) {
   return (
     

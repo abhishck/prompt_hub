@@ -10,9 +10,10 @@ function Navbar() {
   return (
     <div className="w-full h-[80px] flex items-center justify-between px-8 py-2 sm:px-12 md:px-24 lg:px-32 bg-white fixed top-0 right-0 left-0 z-1000">
       <motion.h1 
-      initial={{opacity:0}}
-      whileInView={{opacity:1}}
+      initial={{opacity:0,scale:0}}
+      whileInView={{opacity:1,scale:1}}
       transition={{duration:0.5}}
+      viewport={{ once: true }}
       className="capitalize font-[pacifico] font-semibold text-2xl sm:text-3xl text-purple-600">
         promptHub
       </motion.h1>
@@ -78,9 +79,10 @@ function Navbar() {
       </div>
       {/* laptop-menu */}
       <motion.ul
-       initial={{opacity:0}}
-      whileInView={{opacity:1}}
+       initial={{opacity:0, scale:0}}
+      whileInView={{opacity:1 ,scale:1}}
       transition={{duration:0.5,delay:0.3}}
+      viewport={{ once: true }}
        className="hidden lg:flex md:items-center md:gap-8 font-[Outfit] text-md lg:text-lg">
         <li>
           <a
@@ -120,9 +122,10 @@ function Navbar() {
         </li>
       </motion.ul>
       <motion.div 
-       initial={{opacity:0}}
-      whileInView={{opacity:1}}
+       initial={{opacity:0,scale:0}}
+      whileInView={{opacity:1,scale:1}}
       transition={{duration:0.5, delay:0.6}}
+      viewport={{ once: true }}
       className="sign-in hidden lg:flex md:items-center md:gap-3 font-[Outfit]">
         <h2 className="text-lg">Sign In</h2>
         <button className="px-5 py-2 text-white bg-purple-600 rounded-lg text-lg">

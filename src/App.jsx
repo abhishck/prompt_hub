@@ -3,12 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import Header from './components/Header'
-import Navbar from './components/Navbar'
-import Categories from './components/Categories'
-import Features from './components/Features'
-import Testiomonial from './components/Testiomonial'
-import Contact from './components/Contact'
+import Header from './components/ui/Header'
+import Navbar from './components/ui/Navbar'
+import Categories from './components/ui/Categories'
+import Features from './components/ui/Features'
+import Testiomonial from './components/ui/Testiomonial'
+import Contact from './components/ui/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
