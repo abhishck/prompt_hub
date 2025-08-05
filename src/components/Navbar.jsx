@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "motion/react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +9,13 @@ function Navbar() {
 
   return (
     <div className="w-full h-[80px] flex items-center justify-between px-8 py-2 sm:px-12 md:px-24 lg:px-32 bg-white fixed top-0 right-0 left-0 z-1000">
-      <h1 className="capitalize font-[pacifico] font-semibold text-2xl sm:text-3xl text-purple-600">
+      <motion.h1 
+      initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      transition={{duration:0.5}}
+      className="capitalize font-[pacifico] font-semibold text-2xl sm:text-3xl text-purple-600">
         promptHub
-      </h1>
+      </motion.h1>
       <div className="lg:hidden">
         <FontAwesomeIcon
           icon={faBars}
@@ -72,7 +77,11 @@ function Navbar() {
         </div>
       </div>
       {/* laptop-menu */}
-      <ul className="hidden lg:flex md:items-center md:gap-8 font-[Outfit] text-md lg:text-lg">
+      <motion.ul
+       initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      transition={{duration:0.5,delay:0.3}}
+       className="hidden lg:flex md:items-center md:gap-8 font-[Outfit] text-md lg:text-lg">
         <li>
           <a
             className="hover:text-purple-500 relative group transform transition-all duration-300"
@@ -109,13 +118,17 @@ function Navbar() {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
           </a>
         </li>
-      </ul>
-      <div className="sign-in hidden lg:flex md:items-center md:gap-3 font-[Outfit]">
+      </motion.ul>
+      <motion.div 
+       initial={{opacity:0}}
+      whileInView={{opacity:1}}
+      transition={{duration:0.5, delay:0.6}}
+      className="sign-in hidden lg:flex md:items-center md:gap-3 font-[Outfit]">
         <h2 className="text-lg">Sign In</h2>
         <button className="px-5 py-2 text-white bg-purple-600 rounded-lg text-lg">
           Get Started
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }
