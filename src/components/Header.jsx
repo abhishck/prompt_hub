@@ -3,14 +3,21 @@ import header from "../assets/header.jpg";
 import Navbar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "motion/react"
 function Header() {
   return (
     <div
-      className=" h-[100vh] w-full bg-cover bg-center lg:mt-[80px]"
+      className=" w-full bg-cover bg-center lg:mt-[80px]"
       style={{ backgroundImage: `url(${header})` }}
     >
-      <div className=" masker w-full h-full bg-gradient-to-r from-white/90 to-white/0 px-8 sm:px-12 md:px-24 lg:px-32 md:flex md:flex-row md:items-start  ">
-        <div className="flex flex-col gap-4 pt-[150px] md:pt-[0px] my-auto ">
+      <div 
+      
+      className=" masker w-full h-full bg-gradient-to-r from-white/90 to-white/0 px-8 sm:px-12 md:px-24 lg:px-32 md:flex md:flex-row md:items-start  ">
+        <motion.div 
+       initial={{opacity: 0, scale:0}}
+       whileInView={{opacity:1 , scale:1 }}
+       transition={{ duration: 1 }}
+        className="flex flex-col gap-4 pt-[150px] md:pt-[80px] my-auto ">
           {["Premium AI", "Prompts for", "Creative ","Success"].map(
             (item, index) => {
               return (
@@ -52,7 +59,7 @@ function Header() {
             <p className="max-w-[25vw] sm:text-xl">Money Back Guarantee</p>
           </div>
         </div>
-        </div>
+        </motion.div>
         
       </div>
     </div>
