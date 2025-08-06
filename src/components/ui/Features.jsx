@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setCategory } from '../../Redux/Slices/CategorSlice'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 function Features() {
     const [categories,setCategories]=useState([])
@@ -57,7 +58,8 @@ function Features() {
         })}
       </div>
       <div className='flex item-center justify-center'>
-        <button className='px-5 md:px-8 py-3 rounded-lg font-medium font-[Outfit] text-black bg-gray-300 cursor-pointer mb-3 group hover:bg-purple-600 hover:text-white'  > <FontAwesomeIcon icon={faArrowDown} className='group-hover:translate-y-1 group-hover:text-white transition-all duration-100'/> View More</button>
+       <Link to="/products">
+        <button className='px-5 md:px-8 py-3 rounded-lg font-medium font-[Outfit] text-black bg-gray-300 cursor-pointer mb-3 group hover:bg-purple-600 hover:text-white'  > <FontAwesomeIcon icon={faArrowDown} className='group-hover:translate-y-1 group-hover:text-white transition-all duration-100'/> View All Prompts</button></Link>
       </div>
     </div>
   )

@@ -3,10 +3,10 @@ import React from "react";
 function ProductList({item}) {
   return (
     
-      <div className="h-fit w-[330px] group hover:-translate-y-2 overflow-hidden sm:w-[400px] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group rounded-lg">
+      <div className="h-fit w-[330px] group hover:-translate-y-2 overflow-hidden sm:w-[400px]  transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group rounded-lg">
         <img
-          src={item.img1}
-          alt=""
+          src={item.online_img}
+          alt="img"
           className="h-[200px] w-full rounded-t-xl cursor-grab group-hover:scale-105 transition-all duration-200"
         />
         <div className="p-6 flex flex-col gap-4">
