@@ -4,7 +4,7 @@ import { Routes,Route } from 'react-router-dom'
 
 import LandingPage from './pages/LandingPage'
 import NotFound from './pages/NotFound'
-import Register from './components/auth-ui/register'
+import Register from './components/auth-ui/Register'
 import Login from './components/auth-ui/Login'
 import ProductPage from './pages/ProductPage'
 
