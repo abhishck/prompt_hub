@@ -44,7 +44,7 @@ function Features() {
                 )
             })}
       </div>
-      <div className='flex flex-col gap-4 lg:flex-row items-center lg:flex-wrap justify-center '> 
+      <div className='grid grid-cols-1 lg:grid-cols-4 gap-2'> 
         {prompts.filter(item=>{
           if(selector==="All"){
             return item;

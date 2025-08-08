@@ -9,7 +9,7 @@ import Login from './components/auth-ui/Login'
 import ProductPage from './pages/ProductPage'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>

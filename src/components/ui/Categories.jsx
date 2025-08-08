@@ -60,7 +60,7 @@ function Categories() {
       whileInView={{opacity:1,scale:1}}
       transition={{duration:1}}
       viewport={{ once: true }}
-      className="flex w-full flex-col gap-8 lg:flex-row lg:flex-wrap items-center   lg:justify-center">
+      className="grid grid-cols-1 lg:grid-cols-4 gap-3">
         {promptCategories.map((item,index)=>{
           return (
             <CategoryCard item={item} key={index}/>

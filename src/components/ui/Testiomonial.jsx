@@ -17,7 +17,7 @@ function Testiomonial() {
         See how professionals are transforming their work with our premium prompts
         </p>
         </div>
-        <div className=' flex flex-col gap-8 lg:flex-row lg:flex-wrap items-center max-w-[80vw] mx-auto py-10 justify-center'>
+        <div className=' grid grid-cols-1 lg:grid-cols-4 gap-2'>
             {
                 number.map((_,index)=>{
                     return(

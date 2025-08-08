@@ -23,7 +23,7 @@ function ProductPage() {
   // --------pagination---------
 
   const [currentPage,setCurrentPage]=useState(1);
-  const [itemPerPage,setItemPerPage]=useState(6)
+  const [itemPerPage,setItemPerPage]=useState(8)
 
   const lastPostIndex=currentPage * itemPerPage;
   const firstPostIndex=lastPostIndex-itemPerPage;
@@ -99,7 +99,7 @@ if (selector === "All") {
         </select>
       </div>
      </div>
-     <div className='flex flex-col gap-6 items-center justify-center lg:flex-row lg:flex-wrap px-8 py-8 sm:py-12 sm:px-12 md:px-24 lg:px-32'>
+     <div className='grid grid-cols-1 lg:grid-cols-4 gap-3 place-items-center lg:place-items-start px-8 py-8 sm:py-12 sm:px-12 md:px-24 lg:px-32'>
       {categoryPagination.slice(firstPostIndex,lastPostIndex).map((item,index)=>{
         return (
           <ProductList key={index} item={item}/>

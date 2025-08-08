@@ -3,7 +3,7 @@ import React from "react";
 function ProductList({item}) {
   return (
     
-      <div className="h-fit w-[330px] group hover:-translate-y-2 overflow-hidden sm:w-[400px]  transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group rounded-lg">
+      <div className="h-fit w-[300px] group hover:-translate-y-2 overflow-hidden sm:w-[400px]  transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group rounded-lg">
         <img
           src={item.online_img}
           alt="img"
@@ -11,7 +11,7 @@ function ProductList({item}) {
         />
         <div className="p-6 flex flex-col gap-4">
           <h1 className="text-3xl font-bold max-w-[350px] group-hover:text-purple-500">{item.name}</h1>
-          <p className="text-xl font-medium font-[Outfit] ">
+          <p className="text-xl hidden sm:block font-medium font-[Outfit] ">
            {item.description}
           </p>
          <div className="flex justify-between items-center">
