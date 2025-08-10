@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,9 +72,9 @@ function Navbar() {
           </a>
           <div className="sign-in flex lg:hidden w-full items-center gap-3 font-[Outfit]  hover:translate-x-3">
             <h2 className="text-2xl font-[Outfit] hover:bg-purple-200 hover:text-purple-400 hover:translate-x-3 transition-smooth duration-300 px-4 py-3 rounded-lg font-medium">Sign In</h2>
-            <button className="px-5 py-2 text-white bg-purple-600 rounded-lg text-lg">
-              Get Started
-            </button>
+             <Link to="/register"><button className="px-5 py-2 text-white cursor-pointer bg-purple-600 rounded-lg text-lg">
+          Get Started
+        </button></Link>
           </div>
         </div>
       </div>
@@ -128,9 +129,9 @@ function Navbar() {
       viewport={{ once: true }}
       className="sign-in hidden lg:flex md:items-center md:gap-3 font-[Outfit]">
         <h2 className="text-lg">Sign In</h2>
-        <button className="px-5 py-2 text-white bg-purple-600 rounded-lg text-lg">
+        <Link to="/register"><button className="px-5 py-2 text-white cursor-pointer bg-purple-600 rounded-lg text-lg">
           Get Started
-        </button>
+        </button></Link>
       </motion.div>
     </div>
   );

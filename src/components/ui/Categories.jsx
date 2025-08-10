@@ -57,7 +57,7 @@ function Categories() {
       </motion.div>
       <motion.div 
      
-      className="grid grid-cols-1 lg:grid-cols-4 gap-3">
+      className="grid grid-cols-1 lg:grid-cols-4 gap-4">
         {promptCategories.map((item,index)=>{
           return (
             <CategoryCard item={item} key={index}/>

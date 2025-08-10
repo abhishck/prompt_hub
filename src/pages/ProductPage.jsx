@@ -6,6 +6,7 @@ import { insertPageCategory } from '../Redux/Slices/CategoryPageSlice.jsx';
 import ProductList from "../components/ui/ProductList.jsx"
 import Pagination from '../components/ui/Pagination.jsx';
 import { setSearch } from '../Redux/Slices/SearchSlice.jsx';
+import { motion } from 'motion/react';
 
 function ProductPage() {
   const [pageCategory,setPageCategory]=useState([]);
@@ -69,16 +70,26 @@ if (selector === "All") {
   return (
      <>
       <Navbar/>
-    <div className='w-full py-20 bg-gradient-to-br from-purple-600 via-blue-600 to-purple-700 mt-[80px] '>
-      <div className='flex flex-col space-y-1 items-center justify-center p-10 text-center w-full h-full'>
+    <div className='w-full py-20 bg-gradient-to-br from-purple-600 via-blue-600 to-purple-700 mt-[80px] overflow-y-hidden '>
+      <motion.div
+        initial={{translateY:300}}
+      whileInView={{translateY:0}}
+      transition={{duration:1}}
+      viewport={{ once: true }}
+      className='flex flex-col space-y-1 items-center justify-center p-10 text-center w-full h-full '>
       <h1 className='m-0 p-0 text-[40px] sm:text-[60px] sm:max-w-[80vw] font-semibold font-[Outfit] text-white max-w-[90vw] lg:max-w-full'>All Premium Prompts</h1>
       <p className='text-xl max-w-[90vw] text-gray-200 sm:text-2xl sm:max-w-[70vw] font-[Outfit]'>Discover our complete collection of high-quality AI prompts for every use case</p>
       <input type="text" onChange={(e)=>dispatch(setSearch(e.target.value))} placeholder='Search prompt here...' className='px-12 py-3 rounded-xl outline-none text-center bg-white font-[Pacifico] text-gray-600 mt-6 border-8 border-gray-400' />
-     </div>
+     </motion.div>
     </div>
    
      <div className='flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between px-8 py-8 sm:py-12 sm:px-12 md:px-24 lg:px-32'>
-       <div className=' flex gap-3 lg:gap-4 items-center justify-center flex-wrap '>
+       <motion.div 
+         initial={{opacity:0,scale:0}}
+      whileInView={{opacity:1,scale:1}}
+      transition={{duration:1}}
+      viewport={{ once: true }}
+       className=' flex gap-3 lg:gap-4 items-center justify-center flex-wrap '>
         <button onClick={()=>dispatch(insertPageCategory("All"))} className={`px-5 sm:px-8 py-2 sm:py-3 rounded-lg font-[Outfit] cursor-pointer font-medium bg-gray-400 text-white text-xl transition-all duration-200 hover:scale-105 ${selector === "All" && "text-white bg-purple-500"}`}>All</button>
         {
           pageCategory.map((item,index)=>{
@@ -87,7 +98,7 @@ if (selector === "All") {
             )
           })
         }
-      </div>
+      </motion.div>
       <div className='flex gap-4 items-center justify-center w-full lg:w-[33%]'>
         <h1>Sort by:</h1>
         <select className='px-10 w-4/5 py-3 rounded-lg bg-gray-300  font-medium font-[Outfit] text-lg sm:text-xl' name="sort" id="">
