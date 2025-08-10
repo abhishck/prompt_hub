@@ -7,6 +7,8 @@ import NotFound from './pages/NotFound'
 import Register from './components/auth-ui/Register'
 // import Login from './components/auth-ui/Login'
 import ProductPage from './pages/ProductPage'
+import HomePage from './pages/HomePage'
+import ProductDescription from './components/ui/ProductDescription'
 
 function App() {
   
@@ -16,8 +18,10 @@ function App() {
      <Routes>
       <Route path='/' element={ <LandingPage/>}/>
       <Route path='/register' element={<Register/>} />
-      {/* <Route path='/login' element={<Login/>} /> */}
+      <Route path='/home' element={<HomePage/>} />
+      <Route path='/category' element={<ProductPage/>} />
       <Route path='/products' element={<ProductPage/>} />
+      <Route path='/productDesc' element={<ProductDescription/>} />
       <Route path='*' element={<NotFound/>} />
       
      </Routes>

@@ -48,13 +48,13 @@ function Navbar() {
         <div className="flex flex-col gap-6 items-center mt-4 w-full px-8">
           <a
             className="text-2xl font-[Outfit] hover:bg-purple-200 hover:text-purple-400 hover:translate-x-3 w-full transition-smooth duration-300 px-4 py-3 rounded-lg font-medium"
-            href="#allprompts"
+            href="#testimonial"
           >
-            All Prompts
+            Feedback
           </a>
           <a
             className="text-2xl font-[Outfit] hover:bg-purple-200 hover:text-purple-400 hover:translate-x-3 w-full transition-smooth duration-300 px-4 py-3 rounded-lg font-medium"
-            href="#categories"
+            href="#category"
           >
             Categories
           </a>
@@ -66,7 +66,7 @@ function Navbar() {
           </a>
           <a
             className="text-2xl font-[Outfit] hover:bg-purple-200 hover:text-purple-400 hover:translate-x-3 w-full transition-smooth duration-300 px-4 py-3 rounded-lg font-medium"
-            href="#about"
+            href="#contact"
           >
             About
           </a>
@@ -88,16 +88,16 @@ function Navbar() {
         <li>
           <a
             className="hover:text-purple-500 relative group transform transition-all duration-300"
-            href="#"
+            href="#testimonial"
           >
-            All Prompts{" "}
+            Feedback{" "}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
         </li>
         <li>
           <a
             className="hover:text-purple-500 relative group transform transition-all duration-300"
-            href="#"
+            href="#category"
           >
             Categories{" "}
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
@@ -105,7 +105,7 @@ function Navbar() {
         </li>
         <li>
           <a
-            href="#"
+            href ="#pricing"
             className="relative group hover:text-purple-500 transition-all duration-300"
           >
             Pricing{" "}
@@ -114,7 +114,7 @@ function Navbar() {
         </li>
         <li>
           <a
-            href="#"
+            href="#contact"
             className="relative group hover:text-purple-500 transition-all duration-300"
           >
             About{" "}

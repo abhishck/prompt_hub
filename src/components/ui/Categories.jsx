@@ -39,8 +39,9 @@ function Categories() {
   }
 ];
 
+
   return (
-    <div className="w-full  px-8 sm:px-12 md:px-24 lg:px-32 flex flex-col gap-10 pt-24 lg:pt-32 ">
+    <div id="category" className="w-full  px-8 sm:px-12 md:px-24 lg:px-32 flex flex-col gap-10 pt-24 lg:pt-32 ">
       <motion.div
        initial={{opacity:0,scale:0}}
       whileInView={{opacity:1,scale:1}}
@@ -57,10 +58,10 @@ function Categories() {
       </motion.div>
       <motion.div 
      
-      className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+      className="grid grid-cols-1 place-items-center lg:grid-cols-4 gap-4">
         {promptCategories.map((item,index)=>{
           return (
-            <CategoryCard item={item} key={index}/>
+            <CategoryCard item={item} key={index} />
           )
         })}
       </motion.div>

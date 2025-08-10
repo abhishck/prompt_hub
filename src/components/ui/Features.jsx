@@ -25,7 +25,7 @@ function Features() {
     
     console.log(categories)
   return (
-   <div className="w-full  bg-white px-8 sm:px-12 md:px-24 lg:px-32 flex flex-col gap-10 pt-24 lg:pt-32">
+   <div id="pricing" className="w-full  bg-white px-8 sm:px-12 md:px-24 lg:px-32 flex flex-col gap-10 pt-24 lg:pt-32">
       <motion.div 
         initial={{opacity:0,scale:0}}
       whileInView={{opacity:1,scale:1}}
@@ -55,7 +55,7 @@ function Features() {
                 )
             })}
       </motion.div>
-      <div className='grid grid-cols-1 lg:grid-cols-4 gap-2'> 
+      <div className='grid grid-cols-1 place-items-center lg:grid-cols-4 gap-4'> 
         {prompts.filter(item=>{
           if(selector==="All"){
             return item;

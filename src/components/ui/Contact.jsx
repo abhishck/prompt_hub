@@ -12,6 +12,7 @@ function Contact() {
   return (
     <>
       <div
+      id="contact"
         className="w-full  bg-cover bg-center "
         style={{ backgroundImage: `url(${footer})` }}
       >

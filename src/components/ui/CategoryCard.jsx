@@ -1,5 +1,6 @@
     import React from 'react'
    import { motion } from 'motion/react'
+   import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faMessage } from '@fortawesome/free-solid-svg-icons'
@@ -22,10 +23,10 @@ function CategoryCard({item}) {
           <div className='px-5 py-3 rounded-xl bg-purple-400 flex items-center justify-center font-medium font-[Outfit]'>{item.count}+</div>
         </div>
         <p className='text-xl font-light font-[Outfit] hover:text-purple-500 hover:scale-103 transition-all duration-500'>{item.description}</p>
-        <a className='flex items-center text-xl font-light text-purple-500 group hover:scale-102 transition-all duration-500 font-[Outfit]' href="">Explore More <FontAwesomeIcon icon={faArrowRight} className='ml-1 group-hover:translate-x-1'/> </a>
+       <Link to="/category"> <a className='flex items-center text-xl font-light text-purple-500 group hover:scale-102 transition-all duration-500 font-[Outfit]' href="">Explore More <FontAwesomeIcon icon={faArrowRight} className='ml-1 group-hover:translate-x-1'/> </a></Link>
       </div>
     </motion.div>
   )
 }
 
-export default CategoryCard
+export default CategoryCard;

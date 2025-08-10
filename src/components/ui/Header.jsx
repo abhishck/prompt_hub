@@ -4,15 +4,17 @@ import Navbar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "motion/react"
+import { useNavigate } from "react-router-dom";
 function Header() {
+  const navigate=useNavigate();
   return (
     <div
-      className=" w-full bg-cover bg-center lg:mt-[80px]"
+      className=" w-full min-h-screen bg-cover bg-center lg:mt-[80px]"
       style={{ backgroundImage: `url(${header})` }}
     >
       <div 
       
-      className=" masker w-full h-full bg-gradient-to-r from-white/90 to-white/0 px-8 sm:px-12 md:px-24 lg:px-32 md:flex md:flex-row md:items-start  ">
+      className=" masker w-full min-h-screen bg-gradient-to-r from-white/90 to-white/0 px-8 sm:px-12 md:px-24 lg:px-32 md:flex md:flex-row md:items-start  ">
         <motion.div 
        initial={{opacity: 0, scale:0}}
        whileInView={{opacity:1 , scale:1 }}
@@ -39,11 +41,11 @@ function Header() {
             curated collection.
           </p>
           <div className="flex flex-col gap-1 mt-4 md:flex-row md:gap-3 md:mt-3">
-            <button className="px-8 py-2  sm:py-4 text-white bg-purple-600 rounded-lg font-[pacifico] capitalize font-medium text-lg mt-4 ">
+            <button className="px-8 py-2  sm:py-4 text-white bg-purple-600 rounded-lg font-[pacifico] capitalize font-medium text-lg mt-4 cursor-pointer " onClick={()=>navigate("/products")}>
               browse prompt
             </button>
             <button className="px-8 py-2 sm:py-4 text-purple-600 border-[2px] border-purple-600 rounded-lg font-[pacifico] capitalize font-medium text-lg mt-3 ">
-              View Pricing
+             <a href="#pricing">View Pricing</a>
             </button>
           </div>
           <div className="w-full flex items-center justify-between md:mt-8 py-2 sm:py-6">

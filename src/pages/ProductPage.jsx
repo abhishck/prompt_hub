@@ -32,13 +32,13 @@ function ProductPage() {
 
   const handlePrev=()=>{
     if(currentPage > 1){
-      setCurrentPage(currentPage-1)
+      setCurrentPage(prev => prev - 1)
     }
   }
 
   const handleNext=()=>{
     if(currentPage <totalPages){
-      setCurrentPage(currentPage+1)
+      setCurrentPage(prev => prev + 1)
     }
   }
   

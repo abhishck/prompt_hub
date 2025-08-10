@@ -8,7 +8,7 @@ function Testiomonial() {
         number.push(i);
     }
   return (
-   <div className="w-full  bg-white px-8 sm:px-12 md:px-24 lg:px-32 flex flex-col gap-10 pt-24 lg:pt-32">
+   <div id='testimonial' className="w-full  bg-white px-8 sm:px-12 md:px-24 lg:px-32 flex flex-col gap-10 pt-24 lg:pt-32">
       <motion.div
         initial={{opacity:0,scale:0}}
       whileInView={{opacity:1,scale:1}}
