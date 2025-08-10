@@ -1,9 +1,14 @@
 import React from "react";
+import { motion } from "motion/react";
 
 function ProductList({item}) {
   return (
     
-      <div className="h-fit w-[300px] group hover:-translate-y-2 overflow-hidden sm:w-[400px]  transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group rounded-lg">
+      <motion.div
+        initial={{opacity:0,scale:0}}
+      whileInView={{opacity:1,scale:1}}
+      transition={{duration:1}}
+      viewport={{ once: true }} className="h-fit w-[300px] group hover:-translate-y-2 overflow-hidden sm:w-[400px]  transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 group rounded-lg">
         <img
           src={item.online_img}
           alt="img"
@@ -23,7 +28,7 @@ function ProductList({item}) {
             <button className="px-5 py-3 w-full text-purple-500 font-medium font-[Outfit] border-2 border-purple-500  rounded-lg capitalize">Add to cart</button>
          </div>
         </div>
-      </div>
+      </motion.div>
   
   );
 }

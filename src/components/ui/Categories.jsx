@@ -56,10 +56,7 @@ function Categories() {
         </p>
       </motion.div>
       <motion.div 
-       initial={{opacity:0,scale:0}}
-      whileInView={{opacity:1,scale:1}}
-      transition={{duration:1}}
-      viewport={{ once: true }}
+     
       className="grid grid-cols-1 lg:grid-cols-4 gap-3">
         {promptCategories.map((item,index)=>{
           return (
