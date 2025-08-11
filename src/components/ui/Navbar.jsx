@@ -49,24 +49,40 @@ function Navbar() {
           <a
             className="text-2xl font-[Outfit] hover:bg-purple-200 hover:text-purple-400 hover:translate-x-3 w-full transition-smooth duration-300 px-4 py-3 rounded-lg font-medium"
             href="#testimonial"
+             onClick={() => {
+              setIsOpen(false);
+             
+            }}
           >
             Feedback
           </a>
           <a
             className="text-2xl font-[Outfit] hover:bg-purple-200 hover:text-purple-400 hover:translate-x-3 w-full transition-smooth duration-300 px-4 py-3 rounded-lg font-medium"
             href="#category"
+             onClick={() => {
+              setIsOpen(false);
+             
+            }}
           >
             Categories
           </a>
           <a
             className="text-2xl font-[Outfit] hover:bg-purple-200 hover:text-purple-400 hover:translate-x-3 w-full transition-smooth duration-300 px-4 py-3 rounded-lg font-medium"
             href="#pricing"
+             onClick={() => {
+              setIsOpen(false);
+             
+            }}
           >
             Pricing
           </a>
           <a
             className="text-2xl font-[Outfit] hover:bg-purple-200 hover:text-purple-400 hover:translate-x-3 w-full transition-smooth duration-300 px-4 py-3 rounded-lg font-medium"
             href="#contact"
+             onClick={() => {
+              setIsOpen(false);
+             
+            }}
           >
             About
           </a>
